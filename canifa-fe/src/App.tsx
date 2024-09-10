@@ -9,6 +9,11 @@ import LayoutAdmin from "./components/LayoutAdmin"; // Ensure this import is pre
 import CategoryList from "./components/CategoryList";
 import CategoryForm from "./components/CategoryForm";
 import ProductForm from "./components/ProductForm";
+import News from "./pages/News";
+import Promotion from "./pages/Promotion";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
@@ -16,16 +21,20 @@ function App() {
       <Routes>
         <Route path="/" element={<LayoutClient />}>
           <Route index element={<Home />} />
+          <Route path="/login" element={<AuthForm isLogin />} />
+          <Route path="/register" element={<AuthForm />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/promotion" element={<Promotion />} />
+          <Route path="/contact" element={<Contact />}/>
+          <Route path="/product" element={<Products />}/>
+          <Route path="/detail" element={<Detail />}/>
         </Route>
-
-        <Route path="/login" element={<AuthForm isLogin />} />
-        <Route path="/register" element={<AuthForm />} />
 
         <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<Dashboard />} />
           <Route path="/admin/product-add" element={<ProductForm />} />
           <Route path="/admin/product-edit/:id" element={<ProductForm />} />
-          
+
           <Route path="/admin/categories" element={<CategoryList />} />
           <Route path="/admin/category-add" element={<CategoryForm />} />
           <Route path="/admin/category-edit/:id" element={<CategoryForm />} />

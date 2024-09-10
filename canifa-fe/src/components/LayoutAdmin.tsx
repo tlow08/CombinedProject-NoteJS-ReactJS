@@ -1,12 +1,12 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
 
-const LayoutAdmin = () => {
+const LayoutAdmin: React.FC = (): JSX.Element =>  {
     const { user } = useAuth();
     // console.log(user);
     if(!user || user.role !== "admin"){
-        return alert("Ban khong co quyen truy cap trang nay!");
+        return <Navigate to="/" replace />;
     }
   return (
     <>
