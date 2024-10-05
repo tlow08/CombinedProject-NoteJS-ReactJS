@@ -23,14 +23,14 @@ instance.interceptors.request.use(
     }
 )
 
-instance.interceptors.response.use(
-    (response)=> response,
-    (error)=>{
-        if(error.reaponse && error.response.status ==- 401){
+// instance.interceptors.response.use(
+//     (response)=> response,
+//     (error)=>{
+//         if(error.reaponse && error.response.status ==- 401){
 
-        }
-        return Promise.reject(error);
-    }
-);
+//         }
+//         return Promise.reject(error);
+//     }
+// );
 
 export default instance;

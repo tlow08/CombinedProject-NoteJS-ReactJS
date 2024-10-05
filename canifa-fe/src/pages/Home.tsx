@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import MenuCategories from "../components/MenuCategories";
+// import MenuCategories from "../components/MenuCategories";
 
 const Home = () => {
   return (
     <>
-      <section className="container max-w-screen-2xl m-auto mt-2 grid grid-cols-5 gap-8">
-        <nav className="col-span-1">
+        {/* <nav className="col-span-1">
           <MenuCategories />
-        </nav>
-        <div className="col-span-4">
+        </nav> */}
+        <div className="w-full">
           <div id="carouselExampleCaptions" className="carousel slide">
             <div className="carousel-indicators">
               <button
@@ -100,7 +99,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-      </section>
+      
       <section className="container max-w-screen-2xl m-auto mt-5 grid grid-cols-3 gap-8">
         <div className="flex gap-4 p-4 border-2 border-red-700 rounded-lg ">
           <div className="h-[120px] w-[120px] flex justify-center items-center overflow-hidden rounded-full">
@@ -179,6 +178,7 @@ const Home = () => {
                 <p className="line-through text-gray-600">100000 VND</p>
                 <p className="text-red-500 font-semibold">200000 VND</p>
               </div>
+              <div className="mt-2"><Link to="" className="btn btn-danger w-full">Mua ngay</Link></div>
             </div>
           </div>
           <div className="border p-2 rounded-md border-red-600">
@@ -195,6 +195,7 @@ const Home = () => {
                 <p className="line-through text-gray-600">100000 VND</p>
                 <p className="text-red-500 font-semibold">200000 VND</p>
               </div>
+              <div className="mt-2"><Link to="" className="btn btn-danger w-full">Mua ngay</Link></div>
             </div>
           </div>
         </div>
@@ -224,6 +225,7 @@ const Home = () => {
                 <p className="line-through text-gray-600">100000 VND</p>
                 <p className="text-red-500 font-semibold">200000 VND</p>
               </div>
+              <div className="mt-2"><Link to="" className="btn btn-danger w-full">Mua ngay</Link></div>
             </div>
           </div>
           <div className="border p-2 rounded-md border-red-600">
@@ -240,6 +242,7 @@ const Home = () => {
                 <p className="line-through text-gray-600">100000 VND</p>
                 <p className="text-red-500 font-semibold">200000 VND</p>
               </div>
+              <div className="mt-2"><Link to="" className="btn btn-danger w-full">Mua ngay</Link></div>
             </div>
           </div>
         </div>

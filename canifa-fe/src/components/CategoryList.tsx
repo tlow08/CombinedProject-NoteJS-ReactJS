@@ -8,7 +8,7 @@ const CategoryList = () => {
 
   return (
     <div>
-      <h1>Categories</h1>
+      <h1 className="text-3xl font-semibold text-center">Danh sách danh mục sản phẩm</h1>
       <Link to="/admin/category-add" className="btn btn-primary mb-3">Add New Category</Link>
       <table className="table">
         <thead>

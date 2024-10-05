@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <>
     <section className="mt-16"></section>
-    <footer className="max-w-screen-2xl m-auto bg-red-700 mt-16">
-      <section className="text-white grid grid-cols-3 px-[50px]">
+    <footer className=" bg-red-700 mt-16">
+      <section className="max-w-screen-2xl m-auto text-white grid grid-cols-3 px-[50px]">
         <div className="mt-4">
           <h2 className="font-semibold text-xl">ĐĂNG KÝ NHẬN BẢN TIN</h2>
           <p className="text-base">Cập nhật tin tức, sản phẩm, khuyến mại</p>
@@ -28,7 +28,7 @@ const Footer = () => {
           </form>
         </div>
       </section>
-      <section className="bg-white py-8">
+      <section className=" bg-white py-8">
         <div className="grid grid-cols-3 px-[50px] gap-8">
           <div className="flex flex-col">
             <h3 className="text-xl font-semibold">Chính sách</h3>

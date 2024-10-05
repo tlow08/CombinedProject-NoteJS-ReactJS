@@ -14,6 +14,8 @@ import Promotion from "./pages/Promotion";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Detail from "./pages/Detail";
+import ShoppingCart from "./pages/ShoppingCart";
+import ProductList from "./components/ProductList";
 
 function App() {
   return (
@@ -28,10 +30,13 @@ function App() {
           <Route path="/contact" element={<Contact />}/>
           <Route path="/product" element={<Products />}/>
           <Route path="/detail" element={<Detail />}/>
+          <Route path="/shopping-cart" element={<ShoppingCart/>} />
         </Route>
 
         <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<Dashboard />} />
+
+          <Route path="/admin/products" element={<ProductList />}/>
           <Route path="/admin/product-add" element={<ProductForm />} />
           <Route path="/admin/product-edit/:id" element={<ProductForm />} />
 

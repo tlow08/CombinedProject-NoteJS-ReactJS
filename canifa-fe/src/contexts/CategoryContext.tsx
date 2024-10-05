@@ -31,7 +31,7 @@ const CategoryProvider = ({children} : {children: React.ReactNode}) => {
             await instance.delete(`/categories/${id}`);
             dispatch({type: "REMOVE_CATEGORY", payload: id});
            }
-        }catch(error: any){
+        }catch(error: unknown){
             console.log(error);
             alert("Failed to delete category")
         }

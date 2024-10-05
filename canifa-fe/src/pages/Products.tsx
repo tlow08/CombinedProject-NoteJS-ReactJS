@@ -22,7 +22,7 @@ const Products = () => {
                         <div className="flex gap-2 justify-center text-base my-2">
                             <p className="text-gray-600 line-through">1000000 VNĐ</p><p className="text-red-600 font-semibold">900000 VNĐ</p>
                         </div>
-                        <div><Link to="" className="btn btn-danger">Mua ngay</Link></div>
+                        <div><Link to="" className="btn btn-danger w-full">Mua ngay</Link></div>
                     </div>
                 </div>
                 <div className="border p-2 rounded-md">
@@ -37,7 +37,7 @@ const Products = () => {
                         <div className="flex gap-2 justify-center text-base my-2">
                             <p className="text-gray-600 line-through">1000000 VNĐ</p><p className="text-red-600 font-semibold">900000 VNĐ</p>
                         </div>
-                        <div><Link to="" className="btn btn-danger">Mua ngay</Link></div>
+                        <div><Link to="" className="btn btn-danger w-full">Mua ngay</Link></div>
                     </div>
                 </div>
                 <div className="border p-2 rounded-md">
@@ -52,7 +52,7 @@ const Products = () => {
                         <div className="flex gap-2 justify-center text-base my-2">
                             <p className="text-gray-600 line-through">1000000 VNĐ</p><p className="text-red-600 font-semibold">900000 VNĐ</p>
                         </div>
-                        <div><Link to="" className="btn btn-danger">Mua ngay</Link></div>
+                        <div><Link to="" className="btn btn-danger w-full">Mua ngay</Link></div>
                     </div>
                 </div>
                </div>

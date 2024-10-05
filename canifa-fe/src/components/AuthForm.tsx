@@ -30,17 +30,30 @@ const AuthForm = ({ isLogin }: Props) => {
             alert(res.data.message);
         }
     }catch(error: any){
-        console.log(error);
-        console.log("Error Response:", error.response)
-        alert(error.response?.data?.message || "Error")
+      console.log(error);
+
+      if (error.response) {
+        // Error response from server
+        console.log("Error Response:", error.response);
+        alert(error.response.data.message || "Error");
+      } else if (error.request) {
+        // No response received (e.g., network issues)
+        console.log("Network error or no response:", error.request);
+        alert("Network error or no response from server");
+      } else {
+        // Other errors
+        console.log("Error", error.message);
+        alert("An unexpected error occurred");
+      }
     }
   }
   return (
     <>
-      <form action="" onSubmit={handleSubmit(onSubmit)}>
-        <h1>{isLogin ? "Login" : "Register"}</h1>
+     <section className="max-w-screen-md mx-auto border p-3 rounded-md my-8">
+     <form action="" onSubmit={handleSubmit(onSubmit)}>
+        <h1 className="text-4xl text-center font-semibold">{isLogin ? "Login" : "Register"}</h1>
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">
+          <label htmlFor="email" className="form-label text-xl">
             Email
           </label>
           <input
@@ -54,7 +67,7 @@ const AuthForm = ({ isLogin }: Props) => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="password" className="form-label">
+          <label htmlFor="password" className="form-label text-xl">
             Password
           </label>
           <input
@@ -69,16 +82,19 @@ const AuthForm = ({ isLogin }: Props) => {
         </div>
         {!isLogin && (
           <div className="mb-3">
-            <label htmlFor="confirmPass" className="form-label">
+            <label htmlFor="confirmPass" className="form-label text-xl">
               Confirm Password
             </label>
             <input type="password" id="" className="form-control" {...register("confirmPass",{required: true})} />
             {errors.confirmPass && <p className="text-danger">{errors.confirmPass.message}</p>}
           </div>
         )}
-        <button className="btn btn-primary">{isLogin ? "Login" : "Register"}</button>
-        {isLogin ? <Link to="/register">Register</Link> : <Link to="/login">Login</Link>}
+        <button className="btn btn-danger w-full text-xl">{isLogin ? "Login" : "Register"}</button>
+        <div className="text-base font-semibold mt-2">
+        {isLogin ? <Link to="/register">Register?</Link> : <Link to="/login">Login?</Link>}
+        </div>
       </form>
+     </section>
     </>
   );
 };
